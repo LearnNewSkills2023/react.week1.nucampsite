@@ -1,12 +1,22 @@
+// App.js
 import React from 'react';
-import './App.css';
+import CampsiteCard from './features/campsites/CampsiteCard.js';
+import { CAMPSITES } from './app/shared/CAMPSITES';
+// import CAMPSITES from './app/shared/CAMPSITES.js';
+import Header from './components/Header';
+import CampsitesList from './features/campsites/CampsitesList';
+import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div className="App">
-    hello nucamp!
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            {/* Replace this line */}
+            <CampsiteCard campsite={CAMPSITES[0]} />
+            <CampsitesList />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
